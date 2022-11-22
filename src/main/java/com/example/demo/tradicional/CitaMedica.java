@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 
 public class CitaMedica {
 	private String numero;
-	
 	private LocalDateTime fechaCita;
 	private LocalDateTime fechaAgenda;
 	private Medico medico;
@@ -39,7 +38,17 @@ public class CitaMedica {
 			   
 			this.paciente =pacienteNinio;
 			System.out.println("Paciente ninio sin descuento");
-		}
+		} if(tipo.equals("N")) {
+			   PacienteTerceraEdad pacienteTE = new PacienteTerceraEdad();
+			   pacienteTE.setCodIess("12313245");
+			   pacienteTE.setTipo("TE");
+		}else {
+			PacienteCancer pc = new PacienteCancer();
+		}	this.paciente=pc;
+			   System.out.println("paciente cancer con 30% descuento");
+		//if........
+		
+		//no se debe delegar la construcción de instancias a las clases
 		this.paciente.setNombre(nombrePaciente);
 		this.paciente.setCedula(cedulaPaciente);
 		   
