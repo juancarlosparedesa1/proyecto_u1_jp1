@@ -1,6 +1,6 @@
-package com.example.demo.herencia;
+package com.example.demo.spring.boot;
 
-public class PacienteH {
+public class PacienteSB {
 	
 	private String nombre, cedula, tipo;
 	
@@ -20,27 +20,27 @@ public class PacienteH {
 
 
 
-	protected String getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
 
-	protected void setTipo(String tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
-	protected String getNombre() {
+	public String getNombre() {
 		return nombre;
 	}
 
-	protected void setNombre(String nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	protected String getCedula() {
+	public String getCedula() {
 		return cedula;
 	}
 
-	protected void setCedula(String cedula) {
+	public void setCedula(String cedula) {
 		this.cedula = cedula;
 	}
 	

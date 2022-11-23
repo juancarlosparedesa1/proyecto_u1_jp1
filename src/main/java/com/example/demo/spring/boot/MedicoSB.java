@@ -1,6 +1,8 @@
-package com.example.demo.herencia;
+package com.example.demo.spring.boot;
 
-public class MedicoH {
+import org.springframework.stereotype.Component;
+@Component
+public class MedicoSB {
 
 	private String nombre, cedula;
 	

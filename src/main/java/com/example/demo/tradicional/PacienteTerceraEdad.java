@@ -1,13 +1,20 @@
 package com.example.demo.tradicional;
 
-public class PacienteTerceraEdad extends Paciente{
-	public String getCodIess() {
-		return codIess;
+public class PacienteTerceraEdad extends Paciente {
+	
+	private String codigoIESS;
+
+	public String getCodigoIESS() {
+		return codigoIESS;
 	}
 
-	public void setCodIess(String codIess) {
-		this.codIess = codIess;
+	public void setCodigoIESS(String codigoIESS) {
+		this.codigoIESS = codigoIESS;
 	}
 
-	private String codIess;
+	@Override
+	public String toString() {
+		return super.toString() + " PacienteTerceraEdad [codigoIESS=" + codigoIESS + "]";
+	}
+
 }
