@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.example.demo.herencia.CitaMedicaH;
 import com.example.demo.spring.boot.CitaMedicaSB;
 import com.example.demo.spring.boot.MedicoSB;
+import com.example.demo.spring.boot.PacienteCancerSB;
 import com.example.demo.spring.boot.PacienteTerceraEdadSB;
 
 @SpringBootApplication
@@ -21,6 +22,9 @@ public class ProyectoU1JaApplication implements CommandLineRunner {
 	private CitaMedicaSB citaMedicaSB;
 	@Autowired
 	private MedicoSB medicoSB;
+	@Autowired
+	private PacienteCancerSB cancerSB;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU1JaApplication.class, args);
 	}
@@ -34,6 +38,13 @@ public class ProyectoU1JaApplication implements CommandLineRunner {
 		this.pacienteTE.setCedula("1726897299");
 		this.pacienteTE.setTipo("");
 		this.pacienteTE.setCedula("174564656");
+		
+		this.cancerSB.setCedula("17275023");
+		this.cancerSB.setNombre("smith");
+		this.cancerSB.setTipo("D");
+		
+		this.medicoSB.setCedula("0400726164");
+		this.medicoSB.setNombre("Alicia");
 		
 		System.out.println(pacienteTE);
 		CitaMedicaH cita= new CitaMedicaH();
