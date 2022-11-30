@@ -1,10 +1,13 @@
 package com.example.demo.banco.repository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.example.demo.banco.modelo.Transferencia;
 
 public interface ITransferenciaRepository {
 
-	
+	static List<Transferencia> baseDatos = new ArrayList<>();
 	//CRUD
 	
 	//depende del sistema utilizar el crud todas las 4r funciones
@@ -15,5 +18,6 @@ public interface ITransferenciaRepository {
 		public void insertar(Transferencia transferencia);
 		public void borrar(Integer id);//primarykey//no necesito
 		
+		public List<Transferencia> buscarTodos();
 		
 }
