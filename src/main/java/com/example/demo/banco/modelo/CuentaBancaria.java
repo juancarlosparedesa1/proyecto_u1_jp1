@@ -8,13 +8,14 @@ public class CuentaBancaria {
 	private BigDecimal saldo;
 	private String titular;
 	
-	
-	
 	@Override
 	public String toString() {
 		return "CuentaBancaria [numero=" + numero + ", tipo=" + tipo + ", saldo=" + saldo + ", titular=" + titular
-				+ "]";
+				+ ", getNumero()=" + getNumero() + ", getTipo()=" + getTipo() + ", getSaldo()=" + getSaldo()
+				+ ", getTitular()=" + getTitular() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ ", toString()=" + super.toString() + "]";
 	}
+	//Metodos GET Y SET
 	public String getNumero() {
 		return numero;
 	}
@@ -40,9 +41,5 @@ public class CuentaBancaria {
 		this.titular = titular;
 	}
 	
-//set y get
 	
-	
-	
-
 }

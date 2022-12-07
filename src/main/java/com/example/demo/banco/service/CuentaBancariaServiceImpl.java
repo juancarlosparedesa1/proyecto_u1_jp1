@@ -8,43 +8,38 @@ import com.example.demo.banco.repository.ICuentaBancariaRepository;
 
 @Service
 public class CuentaBancariaServiceImpl implements ICuentaBancariaService{
-	
-	
+
 	@Autowired
-	private ICuentaBancariaRepository cuentaRepository ;
-	
-	
+	private ICuentaBancariaRepository bancariaRepository;
+
 	@Override
-	public CuentaBancaria buscarPorNumero(String numeroCuenta) {
+	public CuentaBancaria buscarPorNUmero(String numeroCuenta) {
 		// TODO Auto-generated method stub
-		return this.cuentaRepository.buscarPorNumero(numeroCuenta);
+		return this.bancariaRepository.buscarPorNUmero(numeroCuenta);
 	}
 
 	@Override
 	public CuentaBancaria buscar(Integer id) {
 		// TODO Auto-generated method stub
-		return this.cuentaRepository.buscar(id);
+		return this.bancariaRepository.buscar(id);
 	}
 
 	@Override
 	public void actualizar(CuentaBancaria cuentaBancaria) {
 		// TODO Auto-generated method stub
-		this.cuentaRepository.actualizar(cuentaBancaria);
-	}
-
-
-
-	@Override
-	public void borrar(Integer id) {
-		// TODO Auto-generated method stub
-		this.cuentaRepository.borrar(id);
-		
+		this.bancariaRepository.actualizar(cuentaBancaria);
 	}
 
 	@Override
 	public void insertar(CuentaBancaria cuentaBancaria) {
 		// TODO Auto-generated method stub
-		this.cuentaRepository.insertar(cuentaBancaria);
+		this.bancariaRepository.insertar(cuentaBancaria);
+	}
+
+	@Override
+	public void borrar(Integer id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

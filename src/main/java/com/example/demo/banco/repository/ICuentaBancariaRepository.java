@@ -4,18 +4,12 @@ import com.example.demo.banco.modelo.CuentaBancaria;
 
 public interface ICuentaBancariaRepository {
 	
-	//
-	public CuentaBancaria buscarPorNumero(String numeroCuenta);
-	//public void actualizar (CuentaBancaria cuentaBancaria);
-		
+	public CuentaBancaria buscarPorNUmero(String numeroCuenta);
+	//public void actualizar(CuentaBancaria cuentaBancaria);
 	
 	//CRUD
-	
-	//BUSCAR
-	public CuentaBancaria buscar(Integer id);//clave primaria
-	//
+	public CuentaBancaria buscar(Integer id);
 	public void actualizar(CuentaBancaria cuentaBancaria);
-	public void insertar(CuentaBancaria cuentaBancaria);
-	public void borrar(Integer id);//primarykey
-
+	public void insertar (CuentaBancaria cuentaBancaria);
+	public void borrar(Integer id);
 }

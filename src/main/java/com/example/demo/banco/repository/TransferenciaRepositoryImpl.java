@@ -3,19 +3,19 @@ package com.example.demo.banco.repository;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.banco.modelo.Transferencia;
-//aqui va todo lo referente a la base de datos
-//vamos hacer metodos mocks
 
 @Repository
 public class TransferenciaRepositoryImpl implements ITransferenciaRepository {
 
-	public static List<Transferencia> baseDatos = new ArrayList<>();
+	private static List<Transferencia> basedatos= new ArrayList<>();
+	
 	@Override
 	public Transferencia buscar(Integer id) {
-		
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -24,13 +24,11 @@ public class TransferenciaRepositoryImpl implements ITransferenciaRepository {
 		// TODO Auto-generated method stub
 		
 	}
-	
+
 	@Override
 	public void insertar(Transferencia transferencia) {
-		
 		// TODO Auto-generated method stub
-		//insert into Transferencia()
-		baseDatos.add(transferencia);
+		basedatos.add(transferencia);
 	}
 
 	@Override
@@ -42,7 +40,10 @@ public class TransferenciaRepositoryImpl implements ITransferenciaRepository {
 	@Override
 	public List<Transferencia> buscarTodos() {
 		// TODO Auto-generated method stub
-		return null;
+		
+		return basedatos;
 	}
+
+	
 
 }

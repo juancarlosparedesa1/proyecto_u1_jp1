@@ -4,19 +4,19 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Transferencia {
-
-	private String cuentaOrigen;
-	private String cuentaDestino;
-	private BigDecimal monto;
-	private LocalDateTime fecha;
-	private String numero;//numero comprobante
 	
-	//Metodos getters and setters
+	private String CuentaOrigen;
+	private String cuentaDestino;
+	private LocalDateTime fecha;
+	private BigDecimal monto;
+	private String numero;
+	
+	//METODOS GET Y SET
 	public String getCuentaOrigen() {
-		return cuentaOrigen;
+		return CuentaOrigen;
 	}
 	public void setCuentaOrigen(String cuentaOrigen) {
-		this.cuentaOrigen = cuentaOrigen;
+		CuentaOrigen = cuentaOrigen;
 	}
 	public String getCuentaDestino() {
 		return cuentaDestino;
@@ -24,17 +24,17 @@ public class Transferencia {
 	public void setCuentaDestino(String cuentaDestino) {
 		this.cuentaDestino = cuentaDestino;
 	}
-	public BigDecimal getMonto() {
-		return monto;
-	}
-	public void setMonto(BigDecimal monto) {
-		this.monto = monto;
-	}
 	public LocalDateTime getFecha() {
 		return fecha;
 	}
 	public void setFecha(LocalDateTime fecha) {
 		this.fecha = fecha;
+	}
+	public BigDecimal getMonto() {
+		return monto;
+	}
+	public void setMonto(BigDecimal monto) {
+		this.monto = monto;
 	}
 	public String getNumero() {
 		return numero;
@@ -42,7 +42,6 @@ public class Transferencia {
 	public void setNumero(String numero) {
 		this.numero = numero;
 	}
-	
 	
 	
 	
