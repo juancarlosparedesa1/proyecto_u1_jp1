@@ -1,6 +1,9 @@
-package com.example.demo.tradicional;
+package com.example.demo.springboot;
 
-public class PacienteTerceraEdad extends Paciente {
+import org.springframework.stereotype.Component;
+
+@Component
+public class PacienteTerceraEdadSB extends PacienteSB {
 	
 	private String codigoIESS;
 
@@ -16,5 +19,9 @@ public class PacienteTerceraEdad extends Paciente {
 	public String toString() {
 		return super.toString() + " PacienteTerceraEdad [codigoIESS=" + codigoIESS + "]";
 	}
-
+	
+	public Integer calcularDescuento() {
+		System.out.println("Paciente con descuento del 20%");
+		return 20;
+	}
 }

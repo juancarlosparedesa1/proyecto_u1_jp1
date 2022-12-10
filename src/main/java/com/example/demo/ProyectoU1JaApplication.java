@@ -29,16 +29,18 @@ public class ProyectoU1JaApplication implements CommandLineRunner {
 //	private MedicoSB medicoSB;
 //	@Autowired
 //	private PacienteCancerSB cancerSB;
+	
 	@Autowired
 	private ICuentaBancariaService bancariaService;
 	@Autowired
 	private ITransferenciaService iTransferenciaService;
+
 //	
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoU1JaApplication.class, args);
 	}
 
-	@Override 
+	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		CuentaBancaria cuenta = new CuentaBancaria();
@@ -46,46 +48,42 @@ public class ProyectoU1JaApplication implements CommandLineRunner {
 		cuenta.setTipo("A");
 		cuenta.setTitular("Juan  Pérez");
 		cuenta.setSaldo(new BigDecimal(100));
-	
+
 		this.bancariaService.insertar(cuenta);
-		
+
 		CuentaBancaria cuenta2 = new CuentaBancaria();
 		cuenta2.setNumero("002");
 		cuenta2.setSaldo(new BigDecimal(1000));
 		cuenta2.setTipo("C");
 		cuenta2.setTitular("Luis Gonzalez");
 		this.bancariaService.insertar(cuenta2);
-		
+
+		System.out.println("Saldo consultar");
+		CuentaBancaria cuentaActual1 = this.bancariaService.buscarPorNumero("001");
+		CuentaBancaria cuentaActual2 = this.bancariaService.buscarPorNumero("002");
+
+		System.out.println("saldos nuevas" + cuentaActual1.getSaldo());
+		System.out.println("saldos nuevas" + cuentaActual2.getSaldo());
+
 		System.out.println("Reporte 1");
-		for(Transferencia t:this.iTransferenciaService.buscarReporte()) {
+		for (Transferencia t : this.iTransferenciaService.buscarReporte()) {
 			System.out.println(t);
 		}
 		this.iTransferenciaService.realizar("001", "002", new BigDecimal(100));
-		
-		
+
 		System.out.println("Reporte 2");
-		for(Transferencia t:this.iTransferenciaService.buscarReporte()) {
+		for (Transferencia t : this.iTransferenciaService.buscarReporte()) {
 			System.out.println(t);
 		}
-		
-		
-//		System.out.println("Spring Boot");
-//		//System.out.println(pacienteCancer);
-//		this.pacienteTE.setCodigoIESS("1234234");
-//		this.pacienteTE.setCedula("1726897299");
-//		this.pacienteTE.setTipo("");
-//		this.pacienteTE.setCedula("174564656");
+
+		System.out.println("saldos nuevos:");
+		CuentaBancaria cuentaConsultada1 = this.bancariaService.buscarPorNumero("001");
+		CuentaBancaria cuentaConsultada2 = this.bancariaService.buscarPorNumero("002");
+
+		System.out.println("saldos nuevas" + cuentaConsultada1.getSaldo());
+		System.out.println("saldos nuevas" + cuentaConsultada2.getSaldo());
+
 //		
-//		this.cancerSB.setCedula("17275023");
-//		this.cancerSB.setNombre("smith");
-//		this.cancerSB.setTipo("D");
-//		
-//		this.medicoSB.setCedula("0400726164");
-//		this.medicoSB.setNombre("Alicia");
-//		
-//		System.out.println(pacienteTE);
-//		CitaMedicaH cita= new CitaMedicaH();
-//		citaMedicaSB.agendar("123123", LocalDateTime.of(2022, 12, 2, 8, 30),pacienteTE, medicoSB);
 	}
 
 }

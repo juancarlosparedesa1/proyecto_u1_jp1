@@ -1,6 +1,9 @@
-package com.example.demo.herencia;
+package com.example.demo.springboot;
 
-public class PacienteNinioH extends PacienteH{
+import org.springframework.stereotype.Component;
+
+@Component
+public class PacienteNinioSB extends PacienteSB{
 	
 	private int pesoNacimiento;
 

@@ -1,6 +1,9 @@
-package com.example.demo.tradicional;
+package com.example.demo.springboot;
 
-public class Medico {
+import org.springframework.stereotype.Component;
+
+@Component
+public class MedicoSB {
 
 	private String nombre, cedula;
 	

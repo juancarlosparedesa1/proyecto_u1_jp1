@@ -7,15 +7,15 @@ import com.example.demo.banco.modelo.CuentaBancaria;
 import com.example.demo.banco.repository.ICuentaBancariaRepository;
 
 @Service
-public class CuentaBancariaServiceImpl implements ICuentaBancariaService{
-
+public class CuentaBancariaServiceImpl implements ICuentaBancariaService {
+	
 	@Autowired
 	private ICuentaBancariaRepository bancariaRepository;
 
 	@Override
-	public CuentaBancaria buscarPorNUmero(String numeroCuenta) {
+	public CuentaBancaria buscarPorNumero(String numeroCuenta) {
 		// TODO Auto-generated method stub
-		return this.bancariaRepository.buscarPorNUmero(numeroCuenta);
+		return this.bancariaRepository.buscarPorNumero(numeroCuenta);
 	}
 
 	@Override
@@ -39,8 +39,7 @@ public class CuentaBancariaServiceImpl implements ICuentaBancariaService{
 	@Override
 	public void borrar(Integer id) {
 		// TODO Auto-generated method stub
-		
+		this.bancariaRepository.borrar(id);
 	}
-	
 
 }

@@ -19,7 +19,7 @@ public class CitaMedica {
 		this.fechaAgenda = LocalDateTime.now();
 
 		Medico medico = new Medico();
-		medico.setCedula(cedMed); 
+		medico.setCedula(cedMed);
 		medico.setNombre(nombreMed);
 		this.medico = medico;
 
