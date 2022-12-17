@@ -2,46 +2,38 @@ package com.example.demo.herencia;
 
 public class PacienteH {
 	
-	private String nombre, cedula, tipo;
+	private String nombre;
+	private String cedula;
+	private String tipo;
 	
 	protected Integer calcularDescuento() {
-		System.out.println("Sin descuento");
+		System.out.println("Sin Descuento");
 		return 0;
 	}
 	
-	
-	
-	//GETTER & SETTER
-
-	@Override
-	public String toString() {
-		return "PacienteH [nombre=" + nombre + ", cedula=" + cedula + ", tipo=" + tipo + "]";
-	}
-
-
-
-	protected String getTipo() {
-		return tipo;
-	}
-
-	protected void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
+	//GET Y SET
 	protected String getNombre() {
 		return nombre;
 	}
-
-	protected void setNombre(String nombre) {
+	protected  void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	protected String getCedula() {
+	protected  String getCedula() {
 		return cedula;
 	}
-
-	protected void setCedula(String cedula) {
+	protected  void setCedula(String cedula) {
 		this.cedula = cedula;
+	}
+	
+	protected  String getTipo() {
+		return tipo;
+	}
+	protected  void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	@Override
+	public String toString() {
+		return "Paciente [nombre=" + nombre + ", cedula=" + cedula + "]";
 	}
 	
 

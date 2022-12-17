@@ -1,22 +1,29 @@
 package com.example.demo.tienda.modelo;
 
 public class Cliente {
-	private String cedula;
 	private String nombre;
+	private String cedula;
 	private String tipo;
 	
-	//Set y get
-	public String getCedula() {
-		return cedula;
+	
+	
+	@Override
+	public String toString() {
+		return "Cliente [nombre=" + nombre + ", cedula=" + cedula + ", tipo=" + tipo + "]";
 	}
-	public void setCedula(String cedula) {
-		this.cedula = cedula;
-	}
+	
+	//METODOS SET Y GET
 	public String getNombre() {
 		return nombre;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+	public String getCedula() {
+		return cedula;
+	}
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
 	}
 	public String getTipo() {
 		return tipo;
@@ -24,10 +31,7 @@ public class Cliente {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	@Override
-	public String toString() {
-		return "Cliente [cedula=" + cedula + ", nombre=" + nombre + ", tipo=" + tipo + "]";
-	}
 	
 	
+
 }

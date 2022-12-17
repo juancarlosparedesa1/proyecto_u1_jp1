@@ -8,7 +8,13 @@ public class Detalle {
 	private Integer cantidad;
 	private BigDecimal subTotal;
 	
-	//Set y get
+	
+	@Override
+	public String toString() {
+		return "Detalle [producto=" + producto + ", numero=" + numero + ", cantidad=" + cantidad + ", subTotal="
+				+ subTotal + "]";
+	}
+	//METODOS GET Y SET
 	public Producto getProducto() {
 		return producto;
 	}
@@ -33,12 +39,7 @@ public class Detalle {
 	public void setSubTotal(BigDecimal subTotal) {
 		this.subTotal = subTotal;
 	}
-	@Override
-	public String toString() {
-		return "Detalle [producto=" + producto + ", numero=" + numero + ", cantidad=" + cantidad + ", subTotal="
-				+ subTotal + "]";
-	}
 	
-	
+	//METODOS GET Y SET
 
 }

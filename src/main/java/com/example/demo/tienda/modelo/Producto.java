@@ -10,60 +10,50 @@ public class Producto {
 	private BigDecimal precio;
 	private Integer cantidad;
 	private LocalDateTime fechaCaducidad;
-
-	// set y get
-	public String getCodigoBarras() {
-		return codigoBarras;
-	}
-
-	public void setCodigoBarras(String codigoBarras) {
-		this.codigoBarras = codigoBarras;
-	}
-
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public String getTipo() {
-		return tipo;
-	}
-
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
-
-	public BigDecimal getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(BigDecimal precio) {
-		this.precio = precio;
-	}
-
-	public Integer getCantidad() {
-		return cantidad;
-	}
-
-	public void setCantidad(Integer cantidad) {
-		this.cantidad = cantidad;
-	}
-
-	public LocalDateTime getFechaCaducidad() {
-		return fechaCaducidad;
-	}
-
-	public void setFechaCaducidad(LocalDateTime fechaCaducidad) {
-		this.fechaCaducidad = fechaCaducidad;
-	}
-
+	
+	
 	@Override
 	public String toString() {
 		return "Producto [codigoBarras=" + codigoBarras + ", nombre=" + nombre + ", tipo=" + tipo + ", precio=" + precio
 				+ ", cantidad=" + cantidad + ", fechaCaducidad=" + fechaCaducidad + "]";
 	}
-
+	
+	//SET Y GET
+	public String getCodigoBarras() {
+		return codigoBarras;
+	}
+	public void setCodigoBarras(String codigoBarras) {
+		this.codigoBarras = codigoBarras;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	public BigDecimal getPrecio() {
+		return precio;
+	}
+	public void setPrecio(BigDecimal precio) {
+		this.precio = precio;
+	}
+	public Integer getCantidad() {
+		return cantidad;
+	}
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
+	}
+	public LocalDateTime getFechaCaducidad() {
+		return fechaCaducidad;
+	}
+	public void setFechaCaducidad(LocalDateTime fechaCaducidad) {
+		this.fechaCaducidad = fechaCaducidad;
+	}
+	
 }

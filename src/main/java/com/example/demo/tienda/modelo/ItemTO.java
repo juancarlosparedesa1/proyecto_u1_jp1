@@ -1,15 +1,13 @@
 package com.example.demo.tienda.modelo;
 
 public class ItemTO {
-	private String codigoBarra;
+	private String codigoBarras;
 	private Integer cantidad;
-	
-	//Set y get
-	public String getCodigoBarra() {
-		return codigoBarra;
+	public String getCodigoBarras() {
+		return codigoBarras;
 	}
-	public void setCodigoBarra(String codigoBarra) {
-		this.codigoBarra = codigoBarra;
+	public void setCodigoBarras(String codigoBarras) {
+		this.codigoBarras = codigoBarras;
 	}
 	public Integer getCantidad() {
 		return cantidad;
@@ -17,10 +15,5 @@ public class ItemTO {
 	public void setCantidad(Integer cantidad) {
 		this.cantidad = cantidad;
 	}
-	@Override
-	public String toString() {
-		return "ItemTo [codigoBarra=" + codigoBarra + ", cantidad=" + cantidad + "]";
-	}
-	
-	
+
 }

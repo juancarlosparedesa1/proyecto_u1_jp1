@@ -12,20 +12,20 @@ import com.example.demo.tienda.repository.IClienteRepository;
 import com.example.demo.tienda.repository.IFacturaRepository;
 
 @Service
-public class FacturaServiceImpl implements IFacturaService {
-	@Autowired
-	private IFacturaRepository facturaRepository;
+public class FacturaServiceImpl implements IFacturaService{
+
 	@Autowired
 	private IClienteRepository clienteRepository;
-
+	@Autowired
+	private IFacturaRepository facturaRepository;
 	@Override
 	public void generar(String cedulaCliente, List<ItemTO> detalles) {
 		// TODO Auto-generated method stub
-
-		Cliente cli = this.clienteRepository.buscar(cedulaCliente);
-		Factura miFactura = new Factura();
-		miFactura.setCliente(cli);
-		this.facturaRepository.insertar(miFactura);
+		
+		Cliente cliente =this.clienteRepository.buscar(cedulaCliente);
+		Factura miFactura=new Factura();
+		miFactura.setCliente(cliente);
+		this.facturaRepository.insertar(null);
 	}
 
 }

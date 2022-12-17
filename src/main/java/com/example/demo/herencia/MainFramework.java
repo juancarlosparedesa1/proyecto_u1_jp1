@@ -6,29 +6,30 @@ public class MainFramework {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		/*PacienteTerceraEdadH pacienteTE = new PacienteTerceraEdadH();
-		pacienteTE.setCedula("123123");
-		pacienteTE.setCodigoIESS("123123");
-		pacienteTE.setNombre("Daniel");
-		pacienteTE.setTipo("TE");
 		
-		PacienteNinioH pacienteTE = new PacienteNinioH();
-		pacienteTE.setCedula("123123");
-		pacienteTE.setPesoNacimiento(8);
-		pacienteTE.setNombre("Daniel");
-		pacienteTE.setTipo("TE");
-		*/
-		PacienteCancerH pacienteTE = new PacienteCancerH();
-		pacienteTE.setCedula("123123");
-		pacienteTE.setNombre("Daniel");
-		pacienteTE.setTipo("C");
+//		PacienteTerceraEdadH pacienteTe=new PacienteTerceraEdadH();
+//		pacienteTe.setCedula("123456789");
+//		pacienteTe.setCodIess("123456789");
+//		pacienteTe.setNombre("Daniel");
+//		pacienteTe.setTipo("TE");
+		
+//		PacienteNinoH pacienteTe=new PacienteNinoH();
+//		pacienteTe.setCedula("123456789");
+//		pacienteTe.setPesonacimiento(8);
+//		pacienteTe.setNombre("Daniel");
+//		pacienteTe.setTipo("TE");
+		
+		PacienteCancerH pacienteTe=new PacienteCancerH();
+		pacienteTe.setCedula("123456789");
+		pacienteTe.setNombre("Daniel");
+		pacienteTe.setTipo("C");
 		
 		MedicoH medico = new MedicoH();
-		medico.setCedula("123123");
+		medico.setCedula("123");
 		medico.setNombre("Diana");
 		
-		CitaMedicaH cita= new CitaMedicaH();
-		cita.agendar("123123", LocalDateTime.of(2022, 12, 2, 8, 30),pacienteTE, medico);
+		CitaMedicaH cita =new CitaMedicaH();
+		cita.agendar("123123",  LocalDateTime.of(2022, 12,2,8,30), pacienteTe, medico);
+		
 	}
-
 }

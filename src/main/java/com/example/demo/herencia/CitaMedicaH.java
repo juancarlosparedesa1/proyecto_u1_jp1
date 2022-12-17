@@ -2,33 +2,45 @@ package com.example.demo.herencia;
 
 import java.time.LocalDateTime;
 
+import com.example.demo.tradicional.CitaMedica;
+import com.example.demo.tradicional.Medico;
+import com.example.demo.tradicional.Paciente;
+
 public class CitaMedicaH {
 	private String numero;
-	private LocalDateTime fechaCita, fechaAgenda;
+	private LocalDateTime fechaCita;
+	private LocalDateTime fechaAgenda;
 	private MedicoH medico;
 	private PacienteH paciente;
-
-	public void agendar(String numero, LocalDateTime fechaCita,PacienteH ph, MedicoH mh) {
-		this.numero = numero;
-		this.fechaCita = fechaCita;
-		this.fechaAgenda = LocalDateTime.now();
-		this.paciente = ph;
+	
+	public void agendar(String numero, LocalDateTime fechaCita,PacienteH  ph, MedicoH mh) {
 		
-		Integer valorDescuento = ph.calcularDescuento();
-		System.out.println("Valor: " + valorDescuento);
-
-		this.medico = mh;
+		this.numero=numero;
+		this.fechaCita=fechaCita;
+		this.fechaAgenda=LocalDateTime.now();
+		
+		Integer valorDescuento =ph.calcularDescuento();
+		System.out.println("Valor:"+ valorDescuento);
+		
+		this.medico=mh; 
+		
 		this.guardarCita(this);
+		
 	}
-
+	
 	private void guardarCita(CitaMedicaH cita) {
-		// funcion INSERT
-		System.out.println("Se ha agendado la cita: ");
+		//Insert en la base de datos, guardar la cita
+		System.out.println("se ha generado la citamedico");
 		System.out.println(cita);
-
 	}
 
-	// GETTER & SETTER
+	@Override
+	public String toString() {
+		return "CitaMedica [numero=" + numero + ", fechaCita=" + fechaCita + ", fechaAgenda=" + fechaAgenda
+				+ ", medico=" + medico + ", paciente=" + paciente + "]";
+	}
+
+	// GET Y SET
 	public String getNumero() {
 		return numero;
 	}
@@ -68,12 +80,5 @@ public class CitaMedicaH {
 	public void setPaciente(PacienteH paciente) {
 		this.paciente = paciente;
 	}
-
-	@Override
-	public String toString() {
-		return "CitaMedicaH [numero=" + numero + ", fechaCita=" + fechaCita + ", fechaAgenda=" + fechaAgenda
-				+ ", medico=" + medico + ", paciente=" + paciente + "]";
-	}
-	
 	
 }
