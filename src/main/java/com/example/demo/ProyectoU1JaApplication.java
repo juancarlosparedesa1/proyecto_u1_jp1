@@ -12,11 +12,10 @@ import com.example.demo.banco.modelo.CuentaBancaria;
 import com.example.demo.banco.modelo.Transferencia;
 import com.example.demo.banco.service.ICuentaBancariaService;
 import com.example.demo.banco.service.ITransferenciaService;
-import com.example.demo.herencia.CitaMedicaH;
-import com.example.demo.spring.boot.CitaMedicaSB;
-import com.example.demo.spring.boot.MedicoSB;
-import com.example.demo.spring.boot.PacienteCancerSB;
-import com.example.demo.spring.boot.PacienteTerceraEdadSB;
+import com.example.demo.ejrcicio1.Service.IPropietarioService;
+import com.example.demo.ejrcicio1.Service.IVehiculoService;
+import com.example.demo.ejrcicio1.modelo.Propietario;
+import com.example.demo.ejrcicio1.modelo.Vehiculo;
 
 @SpringBootApplication
 public class ProyectoU1JaApplication implements CommandLineRunner {
@@ -29,7 +28,11 @@ public class ProyectoU1JaApplication implements CommandLineRunner {
 //	private MedicoSB medicoSB;
 //	@Autowired
 //	private PacienteCancerSB cancerSB;
-	
+
+	@Autowired
+	private IVehiculoService iVehiculoService;
+	@Autowired
+	private IPropietarioService iPropietarioService;
 	@Autowired
 	private ICuentaBancariaService bancariaService;
 	@Autowired
@@ -83,7 +86,30 @@ public class ProyectoU1JaApplication implements CommandLineRunner {
 		System.out.println("saldos nuevas" + cuentaConsultada1.getSaldo());
 		System.out.println("saldos nuevas" + cuentaConsultada2.getSaldo());
 
+		//opcion1
+		Vehiculo vehi = new Vehiculo();
+		vehi.setMarca("Toyota");
+		vehi.setPlaca("PDG23323");
+		vehi.setPrecio(new BigDecimal(2000));
+		vehi.setTipo("P");
+
 //		
+		this.iVehiculoService.crear(vehi);
+		vehi.setPrecio(new BigDecimal(1000000));
+		vehi.setMarca("Chevrolet");
+
+		this.iVehiculoService.modificar(vehi);
+		
+		//opcion 2
+		Propietario propietario = new Propietario();
+		propietario.setApellido("Paredes");
+		propietario.setCedula("1231231232");
+		propietario.setFechaNacimiento(LocalDateTime.of(1989,7,7,12,35));
+		
+		this.iPropietarioService.guardar(propietario);
+
+		//opcion3
+		
 	}
 
 }
